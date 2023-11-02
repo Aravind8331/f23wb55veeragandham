@@ -5,12 +5,17 @@ block content
   p Welcome to Pug #{title}
     - const results = [ { type: 'Fan', manufacturer: 'Havels', cost: 50 }, { type: 'Light', manufacturer: 'Philips', cost: 30 }, { type: 'Television', manufacturer: 'LG', cost: 150 }]
 
-    div.container-fluid
+     div.container-fluid
     div.row
-        each item in results
+        each item,index in results
             div.col-sm-2
             div
-            p Type: #{item.type}
-            p Manufacturer: #{item.manufacturer}
-            p Cost: $#{item.cost}
+            div(class="col-sm-2" onclick=`buy (${index})`) Type: #{item.type}
+            div(class="col-sm-2" onclick=`buy (${index})`) Manufacturer: #{item.manufacturer}
+            div(class="col-sm-2" onclick=`buy (${index})`) Cost: $#{item.cost}
+    script.
+      function buy(itemNum){
+        alert(`you purchased item ${itemNum+1}`)
+     }
+
   
