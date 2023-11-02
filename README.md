@@ -10,4 +10,4 @@ Hosted at <https://f23wb55veeragandham.onrender.com/>
 
 - `electronic_Type` (Type: String).
 - `manufacturer` (Type: String).
-- `most` (Type: Number).
+- `cost` (Type: Number).
